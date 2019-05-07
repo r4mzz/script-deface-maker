@@ -73,9 +73,7 @@ echo "\n\n\n\n Copy your html script below, and paste in your html file!\n\n\n\n
 	<html >
 	<head>
 		<title><?php echo "$input_title"; ?></title>
-		<style type="text/css">
-			body{text-align: center; background-color: black;}img{text-align: center;}h1{color: red;text-align: center;font-family: Stenci;}h3{color: white;text-align: center;}h4{color: grey;text-align: center;}h5{color: white;text-align: center;}#kotak{width: 100%;height: 30px;background-color: red;}#text{padding-top: 5px;color: white;}
-		</style>
+		<style> body{text-align: center; background-color: black;}img{text-align: center;}h1{color: red;text-align: center;font-family: Stenci;}h3{color: white;text-align: center;}h4{color: grey;text-align: center;}h5{color: white;text-align: center;}#kotak{width: 100%;height: 30px;background-color: red;}#text{padding-top: 5px;color: white;}</style>
 	</head>
 	<body><br><br>
 	<img src="https://media.giphy.com/media/MJttD4oi3Hg4M/giphy.gif">
@@ -89,7 +87,7 @@ echo "\n\n\n\n Copy your html script below, and paste in your html file!\n\n\n\n
 	</html>
 
 <?php 
-echo "\n\n\n\n";
+echo "\n\n\n\n \033[92m";
 $result = fopen("$file.html", "a+");
 fwrite($result, "");
 fclose($result);
