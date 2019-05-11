@@ -67,7 +67,7 @@ $file=trim(fgets(STDIN)) ;
 	echo " \n\n\n- >> Don't press enter before you fill it! << -\n\n\n";
 	exit(0);
 }
-echo "\n\n\n\n Copy your html script below, and paste in your html file!\n\n\n\n \e[1m \033[92m";
+echo "\n\n\n\n Your script deface has been created in your script-deface-maker folder!\n\n\n\n \e[1m \033[92m";
  ?>
 
 <?php 
