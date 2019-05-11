@@ -69,26 +69,26 @@ $file=trim(fgets(STDIN)) ;
 }
 echo "\n\n\n\n Copy your html script below, and paste in your html file!\n\n\n\n \e[1m \033[92m";
  ?>
-	<!DOCTYPE html>
+
+<?php 
+$data = "<!DOCTYPE html>
 	<html >
 	<head>
-		<title><?php echo "$input_title"; ?></title>
+		<title>$input_title</title>
 		<style> body{text-align: center; background-color: black;}img{text-align: center;}h1{color: red;text-align: center;font-family: Stenci;}h3{color: white;text-align: center;}h4{color: grey;text-align: center;}h5{color: white;text-align: center;}#kotak{width: 100%;height: 30px;background-color: red;}#text{padding-top: 5px;color: black;}</style>
 	</head>
 	<body><br><br>
-	<img src="https://media.giphy.com/media/MJttD4oi3Hg4M/giphy.gif">
-	<h1><b>TOUCHED BY  <?php echo "$name";?></b></h1><br>
-	<h3><?php echo "$first"; ?></h3>
-	<h4><?php echo "$second"; ?></h4>
-	<h5><?php echo "$third"; ?></h5><br><br>
-	<div id="kotak">
-	<b><marquee id="text">[ THANKS TO ] --- [ <?php echo "$greeting"; ?> ]</marquee></div></b>
+	<img src='https://media.giphy.com/media/MJttD4oi3Hg4M/giphy.gif'>
+	<h1><b>TOUCHED BY $name ></b></h1><br>
+	<h3>$first</h3>
+	<h4>$second</h4>
+	<h5>$third</h5><br><br>
+	<div id='kotak'>
+	<b><marquee id='text'>[ THANKS TO ] --- [ $greeting]</marquee></div></b>
 	</body>
-	</html>
-
-<?php 
+	</html>";
 echo "\n\n\n\n \033[92m";
 $result = fopen("$file.html", "a+");
-fwrite($result, "");
+fwrite($result, $data);
 fclose($result);
 ?>
